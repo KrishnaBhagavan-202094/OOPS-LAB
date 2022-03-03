@@ -1,11 +1,12 @@
+//A C++ progra to pass a 2D array
 #include <iostream>
 using namespace std;
-class arraycall
+class arraycall                                               // defining class
 {
     public:
-void printarray(int **array,int m,int n){
+void printarray(int **array,int m,int n){                     //function prototype declaration
     int i,j;
-    cout<<"Print Function Called Array"<<endl;
+    cout<<"Print Function Called Array"<<endl;                //Printing array
     for(i=0;i<m;i++){
         for(j=0;j<n;j++){
             cout<<array[i][j]<<" ";
@@ -16,15 +17,16 @@ void printarray(int **array,int m,int n){
 };
 int main()
 {
-    int m,n,i,j;
-    arraycall ac;
+    int m,n,i,j;                                             //intialization of variables
+    arraycall ac;                                            //Object declaration
     cout<<"Print values of m and n: ";
-    cin>>m>>n;
-    int **array=new int*[m];
+    cin>>m>>n;                                               //Taking row and column inputs
+    //Here we declare an array which stores pointers then in that pointer array we initialize values to that array.Like this we take input in a dynamically 2D array
+    int **array=new int*[m];                                 
     for(i=0;i<m;i++){
         array[i]=new int [n];
     }
-    cout<<"Print Array"<<endl;
+    cout<<"Print Array"<<endl;                               //We print the array
     for(i=0;i<m;i++){
         for(j=0;j<n;j++){
             cout<<" ";
@@ -32,6 +34,6 @@ int main()
         }
         cout<<endl;
     }
-    ac.printarray(array,m,n);
+    ac.printarray(array,m,n);                              
     return 0;
 }
