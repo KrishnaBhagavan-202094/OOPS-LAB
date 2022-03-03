@@ -1,0 +1,14 @@
+//Write a C++ program to use inline function
+#include <iostream>
+using namespace std;
+inline int product(int a,int b){                                          //Declaring function prototype
+    return a*b;                                                           //returning an interger type value of multiplication of two numbers
+}
+int main()
+{
+    int a,b,result;                                                       //Declaring variables
+    cout<<"Enter two numbers: ";
+    cin>>a>>b;
+    cout<<"Multiplication of two numbers: "<<product(a,b)<<endl;          //Calling an inline function
+    return 0;
+}
