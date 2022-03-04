@@ -1,0 +1,28 @@
+//Use power function
+#include <iostream>
+using namespace std;
+class math                                                  //Declaring class
+{
+    public:
+    double power(double m,int n=2){                         //power function declarion
+        double result=1;
+        int i;
+        for(i=1;i<=n;i++){
+            result*=m;
+        }
+        return result;                                      //Retrurning result
+    }
+};
+int main()
+{
+    double m;
+    cout<<"Value of m: ";                                    
+    cin>>m;                                                //Taking m as input
+    int n;
+    cout<<"Value of n: ";
+    cin>>n;                                               //Taking n as input
+    math p;                                               //Declaring object
+    double result=p.power(m,n);            
+    cout<<"Result is: "<<result<<endl;                    //Printing result
+    return 0;
+}
